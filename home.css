@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  background-color: #f3c98b;
+  overflow: hidden;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                        FONT LINKING
+
+---------------------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: nexa_light;
+  src: url(../fonts/nexa_light.otf);
+}
+
+@font-face {
+  font-family: nexa_bold;
+  src: url(../fonts/nexa_bold.otf);
+}
+
+@font-face {
+  font-family: heavy_demo;
+  src: url(../fonts/mont_heavy.otf);
+}
+.nexa_light {
+  font-family: nexa_light;
+}
+
+.nexa_bold {
+  font-family: nexa_bold;
+}
+
+.mont_heavy {
+  font-family: heavy_demo;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                        NAVIGATIE
+
+---------------------------------------------------------------------------------------------*/
+
+.header-menu {
+  z-index: 999;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: rgba(10, 10, 10, 0.5);
+  position: relative;
+  margin-left: 1rem;
+}
+
+.menu-hover-lines li:first-child a {
+  margin-left: 0;
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+  height: 1px;
+  position: absolute;
+  content: "";
+  transition: all 0.6s ease;
+  background-color: #f3c98b;
+  width: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: #0a0a0a;
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+
+.topnav a {
+  transition: background-color 0.5s ease;
+}
+
+ul.topnav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.topnav li {
+  list-style-type: none;
+}
+
+ul.topnav .navtext li a {
+  float: right;
+}
+
+.topnav .navtext {
+  margin-right: 30%;
+}
+
+ul.topnav .navtext li a {
+  font-size: 11px;
+  display: block;
+  color: #595959;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: nexa_light;
+}
+
+.midpica_right {
+  margin-left: 500px;
+  width: 25%;
+  position: relative;
+  float: right;
+}
+
+ul.topnav .navtext_left {
+  margin-left: 30%;
+  float: left;
+  font-size: 12.5px;
+  margin-top: 18px;
+  box-sizing: inherit;
+  list-style-type: none;
+}
+
+.navtext_left_bold {
+  font-family: nexa_bold;
+  text-decoration: none;
+  color: #595959;
+}
+
+.navtext_left_light {
+  font-family: nexa_light;
+  text-decoration: none;
+  color: #595959;
+  font-size: 14px;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                        CENTERGEDEELTE
+
+---------------------------------------------------------------------------------------------*/
+
+.center {
+  position: relative;
+}
+
+.middentext {
+  line-height: 0.9;
+  font-size: 60px;
+  position: absolute;
+  top: 150px;
+  left: 585px;
+  color: #e7eeff;
+  font-family: heavy_demo;
+}
+
+.center a img {
+  transition: 0.4s ease;
+}
+
+.center a img:hover {
+  transform: scale(1.1);
+}
+
+.middentext_second {
+  line-height: 1;
+  font-size: 18px;
+  position: absolute;
+  top: 470px;
+  left: 750px;
+  color: white;
+  font-family: nexa_light;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                    VAKKEN GEDEELTE
+
+---------------------------------------------------------------------------------------------*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  width: 25%;
+  top: 50px;
+  left: 135px;
+  float: left;
+  position: relative;
+  margin: 2%;
+}
+
+.static:hover {
+  opacity: 0;
+}
+
+.static {
+  position: absolute;
+  background: white;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                        H1
+
+---------------------------------------------------------------------------------------------*/
+
+.vakkentekst,
+h2 {
+  text-align: center;
+  font-family: nexa_bold;
+  color: white;
+}
+
+/*---------------------------------------------------------------------------------------------
+
+                                        RESPONSIVE
+
+---------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+  .topnav .navtext {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.topnav .navtext_left {
+    margin: 0;
+    padding: 15px 5px 5px 25px;
+  }
+
+  .middentext_second {
+    line-height: 1;
+    font-size: 18px;
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    color: white;
+    font-family: nexa_light;
+  }
+
+  .middentext {
+    line-height: 0.9;
+    font-size: 35px;
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    color: white;
+    font-family: nexa_bold;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .topnav .navtext {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.topnav .navtext_left {
+    margin: 0;
+    padding: 15px 5px 5px 25px;
+  }
+}
